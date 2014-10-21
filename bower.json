@@ -1,0 +1,31 @@
+{
+  "name": "webcomponents-vanillajs",
+  "version": "0.0.0",
+  "authors": [
+    "José David Cano <joseda87@gmail.com>"
+  ],
+  "description": "WebComponents example using VanillaJS",
+  "main": "index.js",
+  "keywords": [
+    "VanillaJS",
+    "Underscore",
+    "LESS",
+    "WebComponents"
+  ],
+  "license": "MIT",
+  "homepage": "http://gorzas.es",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "underscore": "~1.7.0"
+  },
+  "devDependencies": {
+    "loader.js": "~2.0.0"
+  }
+}
