@@ -152,15 +152,15 @@ this["JST"]["example"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<h2>Component Scope</h2>\r\n<div class="col-md-6">\r\n  <h3>Value</h3>\r\n  <input type="text" id="text" value="' +
+__p += '<h2>Component Scope</h2>\n<div class="col-md-6">\n  <h3>Value</h3>\n  <input type="text" id="text" value="' +
 __e( value ) +
-'">\r\n</div>\r\n<div class="col-md-6">\r\n  <h3>Range bar</h3>\r\n  <input type="range" id="range" min="' +
+'">\n</div>\n<div class="col-md-6">\n  <h3>Range bar</h3>\n  <input type="range" id="range" min="' +
 __e( min ) +
 '" max="' +
 __e( max ) +
 '" value="' +
 __e( value ) +
-'">\r\n</div>';
+'">\n</div>';
 
 }
 return __p
@@ -171,23 +171,22 @@ define("app",
     "use strict";
     var Example = __dependency1__["default"];
 
-    
     var App = this.App = this.App || {};
-    
+
     if ('undefined' === typeof App) {
       App = {};
     }
-    
+
     App.init = function () {
       $('[data-template="components/example"').each(function() {
         Example.init(this);
       });
     };
-    
+
     document.addEventListener('DOMContentLoaded', function () {
       App.init();
     });
-    
+
     __exports__["default"] = App;
   });
 define("components/ExampleComponent", 
@@ -195,40 +194,40 @@ define("components/ExampleComponent",
   function(__exports__) {
     "use strict";
     'use strict';
-    
+
     var Component = {
       template: window.JST.example,
-    
+
       init: function (root) {
         this.$root = $(root);
         this.min = root.getAttribute('data-min') || 0.0;
         this.max = root.getAttribute('data-max') || 100.0;
         this.value = Math.floor((this.max - this.min) / 2);
-    
+
         this.render();
-    
+
         this.addListeners();
       },
-    
+
       addListeners: function () {
         var that = this;
-    
+
         this.$root.on('change', '#text', function() {
           that.value = this.value;
-    
+
           that.render();
         });
-    
+
         this.$root.on('change', '#range', function() {
           that.value = this.value;
-    
+
           that.render();
         });
       },
-    
+
       render: function () {
         var temp = this.template;
-    
+
         this.$root.html(temp({
           min: this.min,
           max: this.max,
@@ -236,7 +235,7 @@ define("components/ExampleComponent",
         }));
       }
     };
-    
+
     __exports__["default"] = Component;
   });
 

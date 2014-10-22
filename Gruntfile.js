@@ -140,7 +140,6 @@ module.exports = function (grunt) {
         options: {
           wrapper: [
             '(function (global){\n',
-            // '\nrequireModule(\'loader\');' +
             '\nglobal.App = requireModule(\'app\')[\'default\'];\n}(this));'
           ]
         }
